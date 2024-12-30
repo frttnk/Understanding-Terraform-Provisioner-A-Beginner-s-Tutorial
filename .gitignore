@@ -1,0 +1,8 @@
+*.tfstate
+*.tfstate.backup
+**/.terraform.lock.hcl
+*.tfplan
+*.tfvars
+.terraform/
+crash.log
+ProvisionerKeyPair.pem
