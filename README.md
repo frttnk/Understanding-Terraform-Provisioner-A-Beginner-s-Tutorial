@@ -70,7 +70,10 @@ data "aws_ami" "linux"{
 }
 ```
  <br/>
-The `filter` is used to narrow down the results that come from the provider. You do not have to use it. It is optional. <br/>
+ 
+The `filter` is used to narrow down the results that come from the provider. You do not have to use it. It is optional. 
+
+<br/>
 
 `name` is a key that is used by the filter. For example, the result will be filtered by name. If you want to filter the result by `architecture`, then you need to create code like that below.
  <br/>
@@ -81,11 +84,19 @@ filter{
 }
 ```
 <br/>
-Now, we are able to fetch the latest `AMI` , and it's time to create our EC2 instance. In this case, we will use the default security group that AWS provides us. <br/>
+
+Now, we are able to fetch the latest `AMI` , and it's time to create our EC2 instance. In this case, we will use the default security group that AWS provides us.
+
+<br/>
 
 > We need to make sure that our default security group allows SSH (port 22) from our IP address. If it allows `All traffic`, then you do not have to configure anything. However, keeping your security group as `All traffic` is not recommended.
+
+
 <br/>
-Let's check our security group details first. Go to the EC2 page and hit the `Security Groups` on the left side. <br/>  <br/>
+
+Let's check our security group details first. Go to the EC2 page and hit the `Security Groups` on the left side. 
+
+<br/>  <br/>
 
 <p align="center">
    <img src="https://github.com/user-attachments/assets/e72f727f-def7-4dd9-a707-a2831ca64a9e" />
@@ -143,7 +154,10 @@ output "ec2_instance_public_ip"{
 ```
 
  <br/>
-Our configuration is ready now. We will execute `terraform init`, `terraform plan`, and `terraform apply` commands respectively and create an EC2 instance. <br/>
+ 
+Our configuration is ready now. We will execute `terraform init`, `terraform plan`, and `terraform apply` commands respectively and create an EC2 instance. 
+
+<br/>
 
 The entire code should be like the one below. <br/>
 
